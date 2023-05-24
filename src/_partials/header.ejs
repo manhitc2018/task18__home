@@ -1,23 +1,48 @@
 <header class="c-header">
-  <h1 class="c-header__logo"><a href="<%= BASE_URL %>index.html"><img src="/assets/img/logo.png" alt="Logo"></a></h1>
-  <nav class="c-gnav">
-    <ul>
-      <% if (typeof linklists != 'undefined') { %>
-        <% linklists.main && linklists.main.forEach(link => { %>
-          <li>
-            <a <% if (link.current || link.active) { %>class="is-active"<% } %> href="<%= link.url %>"><%= link.title %></a>
-            <% if (link.links) { %>
-              <ul>
-                <% link.links.forEach(child_link => { %>
-                  <li>
-                    <a <% if (child_link.current) { %>class="is-active"<% } %> href="<%= child_link.url %>"><%= child_link.title %></a>
-                  </li>
-                <% }) %>
-              </ul>
-            <% } %>
+  <div class="l-header__container">
+    <div class="c-header__body">
+      <div class="c-header__left">
+        <div class="c-header__logoblock">
+          <a href="./">
+            <picture>
+              <img src="./assets/img/index_pc/logo.png" alt="IST logo">
+            </picture>
+          </a>
+        </div>
+        <a href="#" class="c-header__textblock">
+          <span class="c-header__textsublogo">総合建設コンサルタント</span>
+        </a>
+      </div>
+      <div class="c-header__right">
+        <ul class="c-header__list">
+          <li class="c-header__item">
+            <a href="#">
+              <span class="c-header__itemtext">会社案内</span>
+            </a>
           </li>
-        <% }) %>
-      <% } %>
-    </ul>
-  </nav>
+          <li class="c-header__item">
+            <a href="#">
+              <span class="c-header__itemtext">事業紹介</span>
+            </a>
+          </li>
+          <li class="c-header__item">
+            <a href="#">
+              <span class="c-header__itemtext">実績紹介</span>
+            </a>
+          </li>
+          <li class="c-header__item">
+            <a href="#">
+              <span class="c-header__itemtext">技術資料</span>
+            </a>
+          </li>
+        </ul>
+        <a href="#" class="c-btn01 c-header__btn u-bg__green">
+          <span class="c-btn01__text c-header__btntext ">採用情報</span>
+        </a>
+        <a href="#" class="c-btn01 c-header__btn u-bg__blue">
+          <span class="c-btn01__text c-header__btntext ">お問い合わせ</span>
+        </a>
+      </div>
+    </div>
+  </div>
 </header>
