@@ -1,7 +1,7 @@
 /* Header
 ------------------------------------------------------------*/
 .c-header {
-    max-height: 80px;
+    height: 80px;
     background-color: #fff;
 
     .l-header__container {
@@ -38,6 +38,42 @@
 
     .c-header__list {
         display: flex;
+        align-items: center;
+        height: 80px;
+    }
+
+    .c-header__groupitembtn {
+        position: relative;
+    }
+
+    .c-header__item {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+
+        &::after {
+            content: url("../../assets/img/index_pc/nav_item_bg_hover.png");
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &:hover {
+            &::after {
+                opacity: 0.59;
+                visibility: visible;
+            }
+
+            .c-header__itemlink {
+                opacity: 1;
+            }
+        }
     }
 
     .c-header__itemtext {
@@ -47,8 +83,58 @@
         color: #333;
         line-height: 1.75;
         margin: 0 18px 0 19px;
-        padding: 30px 0; 
     }
+
+    .c-header__dropdownmenu {
+        &:hover {
+            .c-menulv1 {
+                display: block;
+            }
+        }
+    }
+}
+
+.c-menulv1 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    width: 280px;
+    padding: 0 14px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.53);
+    display: none;
+
+    .c-menulv1__item {
+        border-bottom: 1px solid rgb(183, 183, 183, 0.271);
+        padding: 11px 0 12px;
+
+        &:last-child {
+            border-width: 0;
+            padding-bottom: 20px;
+        }
+    }
+
+    .c-menulv1__link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .c-menulv1__itemtext {
+        font-size: 1.6rem;
+        color: #fff;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        line-height: 2;
+
+    }
+
+    .c-menulv1__iconarrow {
+        font-size: 1.6rem;
+        color: #fff;
+    }
+
 }
 
 /* Main menu
