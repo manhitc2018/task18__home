@@ -45,6 +45,7 @@
 @import "2_component/11_video";
 @import "2_component/12_slide";
 @import "2_component/13_mainvisual";
+@import "2_component/14_intro";
 @import "2_component/99_other";
 
 /*≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
@@ -65,3 +66,108 @@
 .u-bg__blue {
     background-color: #48b7d0;
 }
+
+.u-center {
+    text-align: center;
+}
+
+.u-bg__red208 {
+    background-color: rgb(208, 94, 72);
+}
+
+.u-bg__blue72 {
+    background-color: rgb(72, 183, 208);
+}
+
+.u-bg__yellow166 {
+    background-color: rgb(166, 138, 42);
+}
+
+.u-bg__green64 {
+    background-color: rgb(64, 166, 42);
+}
+
+.c-benefits {
+    .c-benefits__bg {
+        background-image: url("../../assets/img/index_pc/section03_bg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .l-container {
+        min-height: 462px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 0;
+    }
+
+    .c-benefits__content {
+        width: 46%;
+        margin-left: auto;
+    }
+
+    .c-title01 {
+        color: #fff;
+        padding-bottom: 20px;
+
+        .c-benefits__title--organspec {
+            color: #f90;
+            margin-left: -9px;
+        }
+
+        .c-benefits__title--spacespec {
+            letter-spacing: 0.05em;
+        }
+    }
+
+    .c-txt01 {
+        font-feature-settings: "palt";
+    }
+
+    .c-txt02 {
+        font-feature-settings: "palt";
+        padding-top: 22px;
+        padding-bottom: 8px;
+
+        .c-benefits__textinfo--organspec {
+            color: #f90;  
+        }
+    }
+
+    .c-benefits__imgblock {
+        position: absolute;
+        top: -9.5%;
+        left: -24%;
+        z-index: -1;
+        animation: animateplane 3s infinite linear;
+    }
+    
+}
+
+
+@keyframes animateplane {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(10px, 10px);
+    }
+
+    50% {
+        transform: translate(-15px, 15px);
+    }
+
+    75% {
+        transform: translate(-30px, -10px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+

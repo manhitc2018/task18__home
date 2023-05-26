@@ -9,6 +9,8 @@ $(document).ready(function() {
         slidesToShow: 1
     });
     $(".c-newsletter__slider").slick({
+        cssEase: "linear",
+        speed: 2000,
         autoplay: true,
         infinite: true,
         dots: false,

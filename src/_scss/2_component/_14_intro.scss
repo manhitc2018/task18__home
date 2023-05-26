@@ -1,0 +1,138 @@
+.c-overplay__hover {
+    position: relative;
+    overflow: hidden;
+    opacity: 1;
+
+    &:hover {
+        &::before {
+            transform: translateX(-101%);
+        }
+
+        &::after {
+            transform: translateX(101%);
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(to right top, rgba(255, 255, 255, 0.7) 50%, transparent 50%);
+        transition: all 0.3s linear;
+        
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(to left bottom, rgba(255, 255, 255, 0.7) 23.7%, transparent 23%);
+        transition: all 0.3s linear;
+    }
+}
+
+.c-overplay__hover--reverse {
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        &::before {
+            transform: translateX(-101%);
+        }
+
+        &::after {
+            transform: translateX(101%);
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7) 23.7%, transparent 23%);
+        transition: all 0.3s linear;
+
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(to  left top, rgba(255, 255, 255, 0.7) 50%, transparent 50%);
+        transition: all 0.3s linear;
+    }
+}
+
+.c-intro {
+    padding-top: 50px;
+    padding-bottom: 99px;
+
+    .c-grouptitle01 {
+        padding-bottom: 16px;
+    }
+
+    .c-intro__itemlink {
+        opacity: 1;
+
+        img {
+            opacity: 1;
+        }
+    }
+
+    .c-intro__subtitle {
+        font-feature-settings: "palt";
+    }
+
+    .c-itro__group {
+        padding-top: 38px;
+    }
+
+    .c-intro__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .c-intro__item {
+        margin: 0 15px;
+    }
+
+    .c-intro__content {
+        position: absolute;
+        width: calc(100% - 30px);
+        transform: translateX(-50%);
+        left: 50%;
+        bottom: 15px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 120px;
+        z-index: 9;
+    }
+
+    .c-intro__contenttitle {
+        font-size: 1.8rem;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        transform: translateY(5px);
+    }
+
+    .c-intro__iconcard {
+        height: 43px;
+        margin-bottom: 8px;
+    }
+}
