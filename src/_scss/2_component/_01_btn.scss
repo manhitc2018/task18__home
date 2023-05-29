@@ -39,3 +39,17 @@ btn
         transform: translateY(-2px);
     }
 }
+
+.c-moreinfo {
+    .c-moreinfo__link {
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .c-moreinfo__icon {
+        margin-left: 4px;
+    }
+    
+}
